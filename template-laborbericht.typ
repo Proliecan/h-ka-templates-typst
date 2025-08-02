@@ -60,14 +60,19 @@
   )
   #counter(page).update(1)
 
-  = Hinweis zu Warenzeichen und Markennamen
+  #heading([Hinweis zu Warenzeichen und Markennamen],
+  outlined: false)
   Diese Arbeit enthält Nennungen von Unternehmensmarken, Produkten und Dienstleistungen. Diese Nennungen stellen keine Markenzeichenbenutzung im geschäftlichen Verkehr dar und dienen lediglich einem wissenschaftlichen Zweck. Aus Gründen der besseren Lesbarkeit wird somit auf die Kennzeichnung dieser Marken mit den entsprechenden Markensymbolen verzichtet.
 
   #v(1fr)
 
-  = Gleichstellungshinweis
+  #heading([Gleichstellungshinweis], outlined: false)
   Zur besseren Lesbarkeit wird auf geschlechtsspezifische Doppelnennungen verzichtet. Stattdessen werden geschlechtsbezogene Personennennungen ganz vermieden und falls nicht anders möglich nach Hermes Phettberg ins Neutrum überführt.
   (T. Kronschläger, Entgendern Nach Phettberg Im Überblick, 2020)
+
+  #pagebreak()
+
+  #outline()
 
   #pagebreak()
 
