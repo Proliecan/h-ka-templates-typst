@@ -15,8 +15,6 @@
   #set page(
     paper: "a4",
     margin: (left: 30mm, right: 30mm, top: 40mm, bottom: 40mm),
-    numbering: "I",
-    number-align: center,
     footer: "",
   )
 
@@ -55,6 +53,13 @@
 
   #pagebreak()
 
+  #set page(
+    footer: auto,
+    numbering: "I",
+    number-align: center,
+  )
+  #counter(page).update(1)
+
   = Hinweis zu Warenzeichen und Markennamen
   Diese Arbeit enthält Nennungen von Unternehmensmarken, Produkten und Dienstleistungen. Diese Nennungen stellen keine Markenzeichenbenutzung im geschäftlichen Verkehr dar und dienen lediglich einem wissenschaftlichen Zweck. Aus Gründen der besseren Lesbarkeit wird somit auf die Kennzeichnung dieser Marken mit den entsprechenden Markensymbolen verzichtet.
 
@@ -67,6 +72,7 @@
   #pagebreak()
 
   #set page(numbering: "1")
+  #counter(page).update(1)
   #set heading(numbering: "1.")
   #set math.equation(numbering: "(1)")
 
