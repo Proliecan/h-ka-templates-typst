@@ -8,6 +8,7 @@
   submission-date: "",
   font: "New Computer Modern",
   dates: (),
+  sources:"",
   content,
 ) = [
   #set document(title: title, author: author)
@@ -95,4 +96,6 @@
     title: heading("Abbildungsverzeichnis", outlined: true),
     target: figure.where(kind: image),
   )
+
+  #bibliography(sources, style: "ieee")
 ]
