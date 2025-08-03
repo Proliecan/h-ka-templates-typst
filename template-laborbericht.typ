@@ -60,8 +60,10 @@
   )
   #counter(page).update(1)
 
-  #heading([Hinweis zu Warenzeichen und Markennamen],
-  outlined: false)
+  #heading(
+    [Hinweis zu Warenzeichen und Markennamen],
+    outlined: false,
+  )
   Diese Arbeit enthält Nennungen von Unternehmensmarken, Produkten und Dienstleistungen. Diese Nennungen stellen keine Markenzeichenbenutzung im geschäftlichen Verkehr dar und dienen lediglich einem wissenschaftlichen Zweck. Aus Gründen der besseren Lesbarkeit wird somit auf die Kennzeichnung dieser Marken mit den entsprechenden Markensymbolen verzichtet.
 
   #v(1fr)
@@ -72,7 +74,7 @@
 
   #pagebreak()
 
-  #outline()
+  #outline() <outline>
 
   #pagebreak()
 
@@ -82,4 +84,15 @@
   #set math.equation(numbering: "(1)")
 
   #content
+
+  #pagebreak()
+
+  #context counter(page).update(counter(page).at(<outline>))
+  #counter(page).step()
+  #set page(numbering: "I")
+
+  #outline(
+    title: heading("Abbildungsverzeichnis", outlined: true),
+    target: figure.where(kind: image),
+  )
 ]
