@@ -8,7 +8,7 @@
   submission-date: "",
   font: "New Computer Modern",
   dates: (),
-  sources:"",
+  sources: "",
   content,
 ) = [
   #set document(title: title, author: author)
@@ -75,6 +75,24 @@
 
   #pagebreak()
 
+  = Erklärung über die selbstständige Erarbeitung
+  #if author != "" {
+    [
+      Hiermit erkläre ich, #author, dass ich die vorliegende Arbeit "#title - #subtitle" selbständig verfasst und erarbeitet habe und keine anderen als die angegebenen Quellen und Hilfsmittel verwendet habe. Ich habe alle Stellen, die wörtlich oder sinngemäß aus veröffentlichten Schriften entnommen wurden, als solche kenntlich gemacht. Die Arbeit hat in gleicher oder ähnlicher Form noch keiner Prüfungsbehörde vorgelegen.
+      Mir ist bewusst, dass eine falsche Erklärung rechtliche Folgen haben kann.
+    ]
+  }
+
+  #v(4cm)
+
+  gez. Élodie Heeren\
+  #text(
+    [(Diese Erklärung wurde maschinell erstellt und ist daher ohne Unterschrift gültig.)],
+    size: 10pt,
+  )
+
+  #pagebreak()
+
   #outline() <outline>
 
   #pagebreak()
@@ -82,7 +100,7 @@
   #set page(numbering: "1")
   #counter(page).update(1)
   #set heading(numbering: "1.")
-  #set math.equation(numbering: "(1)", number-align: end+bottom)
+  #set math.equation(numbering: "(1)", number-align: end + bottom)
 
   #content
 
